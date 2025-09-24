@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('siswas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_lengkap')->unique();
+            $table->string('jenis_kelamin');
+            $table->date('tanggal_lahir');
+            $table->string('kelas');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('siswas');
+    }
+};
+// Model → jembatan antara tabel database dan kode program.
+
+// Migration → untuk membuat/mengelola struktur tabel database.
+
+// Seeder → untuk mengisi tabel dengan data awal atau data contoh.
+
+// Mengapa Laravel pakai Model, bukan langsung SQL?
+
