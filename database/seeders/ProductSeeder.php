@@ -15,10 +15,12 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         DB::table('products')->insert([
+            [
             "nama" => "baju",
             "description" => "Bajunya Brand Raffi Ahmad",
             "price" => 50000,
             "stock" => 322,
+            ],
         ]);
     }
 }
