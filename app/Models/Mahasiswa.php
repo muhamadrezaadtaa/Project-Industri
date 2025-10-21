@@ -16,4 +16,8 @@ class Mahasiswa extends Model
     {
         return $this->belongsTo(Dosen::class, 'id_dosen');
     }
+    public function hobi()
+    {
+        return $this->belongsToMany(Hobi::class, 'mahasiswa_hobi', 'id_mahasiswa', 'id_hobi');
+    }
 }
