@@ -6,7 +6,19 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BiodatasController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\PenggunasController;
+use App\Http\Controllers\TeleponController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\MuridController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\TransaksiController;
 use App\Models\Biodata;
+use App\Models\Barang;
+use App\Models\Pembeli;
+use App\Models\Telepon;
+use App\Models\Murid;
+use App\Models\Transaksi;
+use App\Models\Kelas;
 use App\Models\Wali;
 use App\Models\Mahasiswa;
 use App\Models\TugasProduct;
@@ -288,3 +300,14 @@ Route::get('/hobi/bola', function () {
 
 Route::get('eloquent', [RelasiController::class, 'eloquent']);
 
+Route::resource('telepon',TeleponController::class);
+
+Route::resource('kelas',KelasController::class);
+
+Route::resource('murid',MuridController::class);
+
+Route::resource('barang',BarangController::class);
+
+Route::resource('pembeli',PembeliController::class);
+
+Route::resource('transaksi',TransaksiController::class);

@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pengguna extends Model
+class Pembeli extends Model
 {
     use HasFactory;
 
     // kolom/field yang boleh diisi
-    protected $fillable  = ['id','name'];
+    protected $fillable  = ['id','name_pembeli','jenis_kelamin','telepon'];
     public    $timestamp = true;
 
-    public function telepon()
+    public function transaksi()
     {
-        return $this->hasOne(Telepon::class);
+        return $this->hasMany(Transaksi::class);
     }
 }

@@ -17,7 +17,7 @@
                 <h5>Hobi:</h5>
                 <ul>
                     @forelse ($temp->hobi as $tampung)
-                        <li>{{ $tampung->nama }}</li>
+                        <li>{{ $tampung->nama_hobi }}</li>
                     @empty
                         <li><em>Belum punya hobi</em></li>
                     @endforelse
